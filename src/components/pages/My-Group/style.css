@@ -1,0 +1,58 @@
+.classBody{
+	/* width:100vw; */
+	display: flex;
+	/* flex-direction: column; */
+	align-items: center;
+	min-height:60vh
+}
+
+.mygroups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:30%;
+}
+
+.mygroup h5{
+	text-align: center;
+	width: 80%;
+}
+
+.mygroupscontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  flex-wrap: wrap;
+  padding:20px
+}
+
+
+.NewGroup {
+  margin-top: 25px;
+  text-align: center;
+  margin-top:10vh;
+  margin-bottom: 6vh;
+}
+
+
+
+/* to have things in good shape */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* group rendering */
+
+@media screen and (max-width: 900px) {
+.classBody{
+flex-direction: column;
+align-items: center;
+}
+.mygroup{
+	width:100%
+}
+}

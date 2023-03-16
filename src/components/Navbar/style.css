@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Dancing+Script&display=swap");
+
+
+:root {--buttonCol: #ec5e5e;
+}
+/* body {
+    background-image: url("../../images/rainbow.jpg");
+} */
+
+.titlecontainer{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #f1faee; */
+    /* border-bottom: 5px solid rgb(212, 100, 100); */
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.NavbarBtn {
+    font-size: 1rem;
+    padding:2px;
+    margin: 20px;
+    /* margin-bottom: -5px; */
+    text-decoration: none;
+    border: 5px solid var(--buttonCol);
+    background-color: var(--buttonCol);
+    border-radius: 10px;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+    color:white;
+    box-shadow: 5px 5px 10px rgb(186, 119, 119);
+    background-image:url(./cloud.png);
+    background-size:cover;
+    background-position: top 10px;
+}
+
+.NavbarBtnContainer{
+padding-right: 1px;
+display: flex;
+flex-wrap: wrap;
+}
+
+.titlename{
+    position: relative;
+    font-family: 'Climate Crisis', cursive;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #ff5722;;
+    text-shadow: -4px 4px #ef3550,
+                 -8px 8px #f48fb1,
+                 -12px 12px #7e57c2,
+                 -16px 16px #2196f3,
+                 -20px 20px #26c6da,
+                 -24px 24px #43a047,
+                 -28px 28px #eeff41,
+                 -32px 32px #f9a825,
+                 -36px 36px #ffff;
+    padding:1vw 1vw 4vw;
+    transition:1s;
+  }
+
+.titlename:hover{
+    top:20px
+}
+
+.button-74 {
+  background-color: #ff5722;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right:20px
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
