@@ -30,6 +30,10 @@ const MyProfile = (props) => {
     img.src = path;
   }
 
+  const updateProfile = ()=>{
+    
+  }
+
   useEffect(() => {
     getUser();
   }, []);
@@ -52,6 +56,7 @@ const MyProfile = (props) => {
           aria-describedby="basic-addon3"
           style={{ minWidth: "40vw", marginTop: "8px" }}
           controlId="userName" 
+          placeholder="Paste your "
           onChange={(event) => {
             updatePreview(event);
           }}

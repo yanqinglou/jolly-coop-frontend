@@ -2,63 +2,30 @@
   padding:0;
   margin:0
 }
-.Signup {
-    display:flex;
-    margin:5px;
-    /* flex-direction: column; */
-    align-items: center;
-    margin-bottom: 5vh;
-    flex-wrap: wrap;
-    margin-left:1vw;
-}
 
-
-.Signup form {
-    width:48%;
-    display:flex;
-    flex-direction: column ;
-    justify-content: space-between;
-    align-items: center;
-    width: 20vw;
-    line-height: 4vh;
-    /* padding:10px */
-}
 
 
 .Signup button{
-margin-top:4vh;
+margin-top:5vh;
 }
 
-.signupForm{
+.Signup{
     display: flex;
+    flex:1;
     flex-direction: column;
     align-items: center;
-    background-color: #8ecae6;
+    background-color: #F0E2E7;
+    padding:50px;
+    margin:30px;
     border-radius: 30px;
-    min-height:63vh;
-    padding:2vw;
-    /* justify-content: space-between; */
-    margin:2vh;
     min-width:25vw;
 
 }
 
-.signupFormh1{
-    font-family: 'Climate Crisis', cursive;
-    color:#ffff;
-    padding-top:10%;
-    padding-bottom:10%
-}
-
-.signup form * {
-    width:50% 
-}
-
 .signupBody{
-    min-height:100vh;
     display: flex;
-    justify-content: space-around;
-    background-color: #f1faee;
+    /* justify-content: space-between  ; */
+    align-items: start
 }
 
 .signupContainer{
@@ -69,13 +36,13 @@ margin-top:4vh;
 
 .signupBox{
     display:flex;
+    /* flex:1; */
     flex-direction:column;
-    background-color: #ffd166;
     min-width:25vw; 
-    border-radius: 30px;
-    min-height:60vh;
-    align-items: center;
-    /* justify-content: space-around; */
+    padding:20px;
+    margin:50px;
+    border-bottom:2px solid black
+
 }
 .signupTitle{
     display:flex;
@@ -86,18 +53,16 @@ margin-top:4vh;
     margin-left:1vw;
 }
 
-.jollycoop2{
-    position: relative;
-    font-family: 'Climate Crisis', cursive;
-    margin-top: 0px;
-    /* margin-bottom: 50px; */
-    text-align: center;
-    font-size: 7rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    color: #ff5722;;
-    animation: color-animation 5s linear infinite;
-  }
+.signupTitle h1{
+  position: relative;
+  font-family: 'Climate Crisis', cursive;
+  /* margin-bottom: 50px; */
+  text-align: center;
+  font-size: 6em;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  animation: color-animation 5s linear infinite;
+}
 
   @media screen and (max-width: 800px) {
     .signupContainer{
