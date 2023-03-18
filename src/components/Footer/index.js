@@ -5,7 +5,18 @@ import "./style.css";
 const Footer = (props) => {
   return (
     <footer className="footer">
-      <h1>JOLLY-COOP</h1>
+      <div className="titlecontainer">
+      <h1 className="jollycoopfont jollycoopfontcolor1">J </h1>
+      <h1 className="jollycoopfont jollycoopfontcolor1">0</h1>
+      <h1 className="jollycoopfont">L</h1>
+      <h1 className="jollycoopfont">L</h1>
+      <h1 className="jollycoopfont">Y</h1>
+      <h1 className="jollycoopfont">-</h1>
+      <h1 className="jollycoopfont">C</h1>
+      <h1 className="jollycoopfont">0</h1>
+      <h1 className="jollycoopfont jollycoopfontcolor1">0</h1>
+      <h1 className="jollycoopfont jollycoopfontcolor1">P</h1>
+      </div>
       <div className="footerul">
         <div>
           <h5>

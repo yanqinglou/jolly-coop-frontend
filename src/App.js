@@ -5,6 +5,7 @@ import { Login } from "./components/pages/Login"
 import  Navbar  from "./components/Navbar"
 import API from "./utils/API"
 import FindGame from "./components/pages/Find-Game"
+import MyProfile from "./components/pages/My profile";
 import MyList from "./components/pages/My-List"
 import "./components/pages/Find-Game/style.css"
 import MyGroups from "./components/pages/My-Group";
@@ -22,14 +23,13 @@ function App() {
   const [userId, setUserId] = useState(0);
   const [userName, setUserName] = useState("");
 
-
+  const headerFooter = window.location.pathname!=="/login"&&window.location.pathname!=="/signup"
   useEffect(()=>{
     const savedToken = localStorage.getItem("token");
     // console.log(savedToken)
     if(savedToken){
       API.isValidToken(savedToken).then(tokenData=>{
         if(tokenData.isValid){
-          console.log(tokenData)
           setToken(savedToken);
           setUserId(tokenData.user.id)
           setUserName(tokenData.user.username)
@@ -39,6 +39,8 @@ function App() {
         }
       })
     }
+
+
   },[])
 
   const logout = ()=>{
@@ -54,13 +56,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-     {window.location.pathname!=="/login"&&<Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>}
+     {headerFooter&&<Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>}
       <br/>
       <Routes>
       <Route path="/login" element={<Login setToken={setToken} setUserId={setUserId} setUserName={setUserName} setIsLoggedIn={setIsLoggedIn} userId={userId}/>}/>
       <Route path="/signup" element={<Signup setToken={setToken} setUserId={setUserId} setUserName={setUserName} setIsLoggedIn={setIsLoggedIn} userId={userId}/>}/>
         <Route path="/" element={<HomeLogout/>}/>
          <Route path="/home/:id" element={<Home token={token} userId={userId}/>}/>
+         <Route path="/myprofile/:id" element={<MyProfile token={token} userId={userId}/>}/>
         <Route path="/signup" element={<h1>Signup</h1>}/>
         <Route path="/findfriend" element={<FindFriend token={token} userId={userId} userName={userName}/>}/>
         <Route path="/findgames" element={<FindGame/>}/>
@@ -69,7 +72,7 @@ function App() {
         <Route path="/mygroup" element={<MyGroups token={token} userId={userId} userName={userName}/>}/>
         <Route path="*" element={<h1>404 page not found</h1>}/>
       </Routes>
-      {window.location.pathname!=="/login" &&<Footer/>}
+      {headerFooter&&<Footer/>}
       </BrowserRouter>
     </div>
   );
