@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/jolly-co-op-frontend/static/css/main.8ecf0d08.css",
-    "main.js": "/jolly-co-op-frontend/static/js/main.d1c66f08.js",
-    "static/media/nintendo-logo.png": "/jolly-co-op-frontend/static/media/nintendo-logo.ea4a13b651821a218105.png",
-    "static/media/ps-logo.png": "/jolly-co-op-frontend/static/media/ps-logo.5dd9275ced61c4161457.png",
-    "static/media/xbox-logo.png": "/jolly-co-op-frontend/static/media/xbox-logo.8a30da23665fe0010338.png",
-    "index.html": "/jolly-co-op-frontend/index.html",
-    "main.8ecf0d08.css.map": "/jolly-co-op-frontend/static/css/main.8ecf0d08.css.map",
-    "main.d1c66f08.js.map": "/jolly-co-op-frontend/static/js/main.d1c66f08.js.map"
+    "main.css": "/jolly-coop-frontend/static/css/main.8ecf0d08.css",
+    "main.js": "/jolly-coop-frontend/static/js/main.d7bbdefd.js",
+    "static/media/nintendo-logo.png": "/jolly-coop-frontend/static/media/nintendo-logo.ea4a13b651821a218105.png",
+    "static/media/ps-logo.png": "/jolly-coop-frontend/static/media/ps-logo.5dd9275ced61c4161457.png",
+    "static/media/xbox-logo.png": "/jolly-coop-frontend/static/media/xbox-logo.8a30da23665fe0010338.png",
+    "index.html": "/jolly-coop-frontend/index.html",
+    "main.8ecf0d08.css.map": "/jolly-coop-frontend/static/css/main.8ecf0d08.css.map",
+    "main.d7bbdefd.js.map": "/jolly-coop-frontend/static/js/main.d7bbdefd.js.map"
   },
   "entrypoints": [
     "static/css/main.8ecf0d08.css",
-    "static/js/main.d1c66f08.js"
+    "static/js/main.d7bbdefd.js"
   ]
 }
