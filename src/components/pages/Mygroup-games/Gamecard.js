@@ -177,16 +177,14 @@ function Gamecard(props) {
 
 
   return (
-    <div className={divStyle}>
-           
-      {/* {props.iswining?<div className="winnerBanner"><p>👑</p></div>:<div className="losingBanner"><p>👏</p></div>} */}
-      <div className="card">
-      {owner &&<CloseButton className="delete" onClick={deleteGame}/>}
-        <img src={props.img} className="card-img-top" alt="Game Art" />
+    <div className="box">
+        <img src={props.img} className="card-img-top gameimg" alt="Game Art" />
+        {owner &&<CloseButton variant="white" className="delete" onClick={deleteGame}/>}
+        <br></br>
         <div className="card-body d-flex flex-column justify-content-between align-items-center">
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text">Available On:</p>
-          <ul className="list-group d-flex">{platformList}</ul>
+          <ul className="list-inline">{platformList}</ul>
           <p className="card-text">Overall Rating: {props.rating}</p>
           {usergamevote ? (
             <button
@@ -207,7 +205,6 @@ function Gamecard(props) {
           <br></br>
           <p>⛳️ Current: {vote}</p>
   
-        </div>
       </div>
     </div>
   );

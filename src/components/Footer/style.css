@@ -6,8 +6,10 @@
     align-items: start;
     bottom:0vh
 }
-.footer h1{
-    font-size: 230%;
+.footercontainer{
+    display: flex;
+    font-size: 50%;
+    margin-top: 50px;
 }
 
 .footerul{

@@ -1,56 +1,49 @@
-import React, {useEffect, useState} from "react"
-import "./style.css"
-import API from "../../../utils/API"
-import  ImgCarousel  from "../Home/ImgCarousel.js"
-
+import React, { useEffect, useState } from "react";
+import "./style.css";
+import API from "../../../utils/API";
+import ImgCarousel from "../Home/ImgCarousel.js";
 
 const styleCard = {
-    width: "70%",
-    margin:"auto",
-    borderWidth: "5px",
-    borderStyle: "double",
-    borderColor: "#26c6da"
-}
+  width: "70%",
+  margin: "auto",
+  borderWidth: "5px",
+  borderStyle: "double",
+  borderColor: "#26c6da",
+};
 
-function HomeLogout(){
-    const [games, setGames] = useState([]);
-const fetchGames = () => {
+function HomeLogout() {
+  const [games, setGames] = useState([]);
+  const fetchGames = () => {
     API.getAllGames().then((data) => {
-        setGames(data)
-    })
-}
+      setGames(data);
+    });
+  };
 
-useEffect(() => {
+  useEffect(() => {
     fetchGames();
-}, []);
+  }, []);
 
-
-
-    return (
-        <div>
-<div className="welcomeLPage">
-<div className="page-container">
-
-    <h1 className="welcomeLPageh1" >Welcome Stranger,</h1>
-    <div className="card-container ">
-</div>
-        <div>
-            
-        <div className="card logoutStyle ">
-    <h2 id="loggedout-text">Login to create a group and start voting!</h2>
-        </div>
+  return (
+    <div className="loggoutContainer">
+      <h2>
+        <a href="/login"> Login</a> or <a href="/signup"> Signup </a>to join 
+      </h2>
+      <div className="jollycontainer">
+        <h3 className="jollycoopfont"> J</h3>
+        <h3 className="jollycoopfont">O</h3>
+        <h3 className="jollycoopfont">L</h3>
+        <h3 className="jollycoopfont">L</h3>
+        <h3 className="jollycoopfont">Y</h3>
+        <h3>
+          <strong>-</strong>
+        </h3>
+        <h3 className="jollycoopfont jollyanimation1">C</h3>
+        <h3 className="jollycoopfont jollyanimation2">O</h3>
+        <h3 className="jollycoopfont jollyanimation3">O</h3>
+        <h3 className="jollycoopfont jollyanimation1">P</h3>
+      </div>
     </div>
-</div>
-    <div className="gameDiv">
-
-<h3 className="popularGames">Popular games at Jolly-Co op</h3>
-        <div className="carousel-box"> 
-  <ImgCarousel games={games}/>
-</div>
-</div>
-    </div>
-    </div>
-    )
+  );
 }
 
 export default HomeLogout;

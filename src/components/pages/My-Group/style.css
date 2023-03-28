@@ -1,40 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,900,700italic,700,600italic,600,400italic);
+
 .classBody{
 	/* width:100vw; */
 	display: flex;
+  flex-direction: column;
 	/* flex-direction: column; */
 	align-items: center;
-	min-height:60vh
+	min-height:50vh
+  
 }
 
 .mygroups {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:30%;
 }
 
-.mygroup h5{
-	text-align: center;
-	width: 80%;
-}
 
 .mygroupscontainer {
   display: flex;
   justify-content: space-around;
   align-items: end;
   flex-wrap: wrap;
-  padding:20px
+  width:1100px;
+  border-radius: 100px;
+  background-color: #f1faee;
 }
 
 
 .NewGroup {
-  margin-top: 25px;
   text-align: center;
-  margin-top:10vh;
-  margin-bottom: 6vh;
+  margin-top:5vh;
+  margin-bottom: 5vh;
 }
 
 
+.name{
+  font-family: 'Titillium Web', cursive;
+}
 
 /* to have things in good shape */
 *,

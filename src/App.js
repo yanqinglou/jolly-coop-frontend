@@ -22,8 +22,12 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userId, setUserId] = useState(0);
   const [userName, setUserName] = useState("");
+  const [user, setUser] = useState({});
+
 
   const headerFooter = window.location.pathname!=="/login"&&window.location.pathname!=="/signup"
+
+
   useEffect(()=>{
     const savedToken = localStorage.getItem("token");
     // console.log(savedToken)
@@ -38,10 +42,14 @@ function App() {
           localStorage.removeItem("token")
         }
       })
+      API.getUserData(userId, token).then((data) => {
+        // console.log(data)
+        setUser(data);
+      });
+
     }
-
-
   },[])
+
 
   const logout = ()=>{
     setToken('');
@@ -56,7 +64,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-     {headerFooter&&<Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>}
+     {headerFooter&&<Navbar isLoggedIn={isLoggedIn} userId={userId}  userName={userName} logout={logout} user={user}/>}
       <br/>
       <Routes>
       <Route path="/login" element={<Login setToken={setToken} setUserId={setUserId} setUserName={setUserName} setIsLoggedIn={setIsLoggedIn} userId={userId}/>}/>

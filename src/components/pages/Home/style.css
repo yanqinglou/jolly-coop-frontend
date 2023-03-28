@@ -1,18 +1,34 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab&family=Rubik+Bubbles&family=Tilt+Warp&display=swap');
 
-/* .body{
-  background-image: url("/src/images/rainbow.jpg");
-} */
-
-.carousel-box{
-   margin-top: 0%;
-    border-top: 10px double #f9a825;
-    background: #000b0c;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
+.userprofile {
+  position: relative;
+  transition: all 0.3s;
+  display:flex;
+  /* flex:1 1 500px; */
+  align-items: center;
+  padding:10px; 
+  min-width: 1100px; 
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 5px #f1faee;
+  margin:10px 5px 10px 5px;
+  background-color: #F0E2E7
 }
+
+.userprofile img{
+width:100px;
+height: 100px;
+margin:10px;
+}
+
+.home-group-container{
+  display:flex;
+  background-color: #f1faee;
+  border-radius: 100px;
+  padding:10px;
+}
+
 .titleBack {
     background: #000b0c;
     /* display: flex;
@@ -38,11 +54,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-/* .home-group-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
+
 .page-container{
   display: block;
   justify-content: center;

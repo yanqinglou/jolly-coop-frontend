@@ -26,7 +26,7 @@
 
 
 .Login button{
-margin-top:4vh;
+margin-top:10px;
 }
 
 .loginForm{
@@ -35,12 +35,10 @@ margin-top:4vh;
     align-items: center;
     background-color: #8ecae6;
     border-radius: 30px;
-    min-height:63vh;
-    padding:2vw;
-    /* justify-content: space-between; */
-    margin:2vh;
     min-width:25vw;
-
+    padding:50px;
+    margin:30px;
+    border-radius: 30px;
 }
 
 .loginFormh1{
@@ -50,40 +48,9 @@ margin-top:4vh;
     padding-bottom:10%
 }
 
-.login form * {
-    width:50% 
-}
-
 .loginBody{
-    min-height:100vh;
     display: flex;
     justify-content: space-around;
-    background-color: #f1faee;
-}
-
-.loginContainer{
-    display: flex;
-    align-items: center;
-    
-}
-
-.loginBox{
-    display:flex;
-    flex-direction:column;
-    background-color: #ff6666;
-    min-width:25vw; 
-    border-radius: 30px;
-    min-height:60vh;
-    align-items: center;
-    /* justify-content: space-around; */
-}
-.loginTitle{
-    display:flex;
-    /* padding: 50px 50px 50px 90px; */
-    margin-right:1vw;
-
-    margin-bottom: 5vh;
-    margin-left:1vw;
 }
 
 .jollycoop2{
@@ -95,7 +62,6 @@ margin-top:4vh;
     font-size: 7rem;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
-    color: #ff5722;;
     animation: color-animation 5s linear infinite;
   }
   #errorMsg{

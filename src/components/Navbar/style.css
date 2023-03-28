@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Dancing+Script&display=swap");
 
 
-:root {--buttonCol: #ec5e5e;
-}
-/* body {
-    background-image: url("../../images/rainbow.jpg");
-} */
-
 .titlecontainer{
     display: flex;
     flex-wrap: wrap;
+    padding:0 150px 0 150px;
+
+    
 }
 
 .titlecontainer h1{
@@ -22,13 +19,76 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 2px solid #131200;
     
 }
 
-.NavbarBtnContainer{
-padding-right: 1px;
-display: flex;
-flex-wrap: wrap;
+.offcanvasBody{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  padding:0;
+  margin:0;
+}
+
+.offcanvasprofile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:10px;
+  margin:0;
+}
+
+.offcanvasBodyLink1{
+  background-color: #F0E2E7 ;
+  padding:22px;
+  text-decoration: 0;
+  color:#131200;
+  font-size: 18px;
+  transition: all 0.3s ease 0s;
+  }
+
+  .example_e:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+    }
+
+  .offcanvasBodyLink2{
+    background-color: #FFD046;
+    padding:22px;
+    text-decoration: 0;
+    color:#131200; 
+    font-size: 20px;
+    }
+
+    .offcanvasBodyLink3{
+      background-color: #A663CC;
+      padding:22px;
+      text-decoration: 0;
+      color:#131200;
+      font-size: 20px;
+      transition: all 0.5s;
+      position: relative;
+      }
+
+      .offcanvasBodyLink4{
+        background-color: #BCF8EC;
+        padding:22px;
+        text-decoration: 0;
+        color:#131200;
+        font-size: 20px
+        }
+
+.offcanvasFooter{
+  display: flex;
+  justify-content: space-around;
+  padding:10px 60px 10px 60px;
+
 }
 
 .jollycoopfontcolor1{
@@ -41,7 +101,55 @@ flex-wrap: wrap;
     text-align: center;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
+    animation: color-animation 5s linear infinite;
   }
+
+  .jollyanimation1{
+    --color-1: #ff5722;
+    --color-2: #f9a825;
+     --color-3:#eeff41;
+   }
+   
+   .jollyanimation2{
+     --color-1: #43a047;
+     --color-2: #26c6da;
+      --color-3:#ef3550;
+    }
+   
+    .jollyanimation3{
+     --color-1: #7e57c2;
+     --color-2: #f48fb1;
+      --color-3:#2196f3
+    }
+   
+   @keyframes color-animation {
+     0% {
+       color: var(--color-1)
+     }
+     32% {
+       color: var(--color-2);
+     }
+     33% {
+       color: var(--color-3)
+     }
+     50% {
+       color: var(--color-1)  }
+     60% {
+       color: var(--color-2);
+     }
+     70% {
+       color: var(--color-3)
+     }
+     80% {
+       color: var(--color-1)
+     }
+     90% {
+       color: var(--color-2);
+     }
+     100%{
+       color: var(--color-3)
+     }
+   }
 
 .titlename:hover{
     top:20px
@@ -82,3 +190,5 @@ flex-wrap: wrap;
     padding: 0 25px;
   }
 }
+
+

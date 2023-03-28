@@ -1,9 +1,11 @@
 .search-page{
-    height: 100%;
+    display:flex;
+    flex-direction: column;
     align-items: start;
     margin:15px;
-    flex-wrap: wrap;
     justify-content:space-around;
+    min-height: 50vh;
+    align-items: stretch;
 }
 /* Title */
 .group-title{
@@ -12,25 +14,29 @@
 
 }
 /* search */
-.Search-Title{
-    margin: 15px;
-}
 .hide{
     display: none;
 }
 .Search{
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
     margin-left: 15px;
-    padding: 20px;
+    padding: 25px;
     max-width: 600px;
+    min-width: 300px;
     height: 500px;
-    background-color: blueviolet;
+    background-color: #BCF8EC;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px rgb(186, 119, 119);
-    
+    box-shadow: 5px 5px 10px rgb(186, 119, 119); 
 }
+
+.Search h3{
+    border-bottom: 2px solid black;
+}
+
 .main{
+    display: flex;
     justify-content: center;
     max-width: 925px;
     align-items: center;
@@ -39,66 +45,53 @@
     
 }
 /* aside shown card */
-.Group-Card{
-    height: 500px;
-    width: 250px;
-    padding: 20px;
+
+.Group-Name{
+    display: flex;
+    padding: 25px;
     float: right;
-    background-color: #26c6da;
-    margin-right: 15px;
+    background-color: #FFD046;
+    margin-bottom: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgb(186, 119, 119);
     position: relative;
-    
 }
-.Group-Card h1{
+
+.Group-Name h3{
+    padding-right:15px;
+}
+
+.Group-Card{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    min-width: 300px;
+    padding: 25px;
+    float: right;
+    background-color: #F0E2E7;
+    margin-right: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(186, 119, 119);
+
+}
+.Group-Card h3{
     overflow-y: auto;
 }
 .Group-Card h3{
-    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 .options{
-    position: absolute;
-    bottom:0;
+    display: flex;
     padding-bottom: 10px;
     padding-right: 15px;
-    align-content: center;
+    align-items: center;
     z-index: 0;
     text-align: center;
+    justify-content: space-around;
+    width: 100%;
 }
-.options p{
-    text-align: center;
-    position: relative;
-    z-index: 0;
 
-}
-.start-group{
-    height: fit-content;
-    width: 140px;
-    margin: 15px;
-    text-decoration: none;
-    border: 5px solid rgb(212, 100, 100);
-    transition: all 0.5s ease;
-    background-color:rgb(212, 100, 100) ;
-    border-radius: 10px;
-    /* border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; */
-    color:white;
-    box-shadow: 5px 5px 10px rgb(186, 119, 119);
-}
-.start-group:hover{
-    height: 40px;
-    width: 20vw;
-    margin: 15px;
-    text-decoration: none;
-    border: 5px solid #43a047;
-    background-color:#43a047 ;
-    border-radius: 10px;
-    /* border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; */
-    color:white;
-    box-shadow: 5px 5px 10px rgb(186, 119, 119);
-}
 .add-users{
     height: 40px;
     width: 40px;
@@ -157,25 +150,25 @@
 }
 
 .add-list{
-  height: 180px;
+  height: 250px;
   width: auto;
-  overflow-y:auto;
-  scroll-snap-align:unset;
-  border: 1px solid #43a047;
+  /* overflow-y:auto;
+  scroll-snap-align:unset; */
+  /* border: 1px solid #43a047; */
   border-radius: 10px;
-  box-shadow: 2px 2px 2px rgb(186, 119, 119);
+  box-shadow: 2px 2px 2px 2px rgb(186, 119, 119);
   transition: all 0.5s ease;
   z-index: 5000;
   position: relative;
+  margin-bottom: 50px;
 
 }
 .add-list:hover{
-  height: 250px;
+  height: 400px;
   width: auto;
   overflow-y:auto;
   scroll-snap-align:unset;
-  background-color: #26c6da ;
-  border: 1px solid #43a047;
+  background-color: #F0E2E7 ;
   border-radius: 10px;
   box-shadow: 2px 2px 20px rgb(186, 119, 119);
   z-index: 5000;

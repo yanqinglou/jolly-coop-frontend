@@ -1,22 +1,83 @@
+.offcanvas2{
+display: flex;
+padding:10px;
+width:1000px;
+justify-content: end;
+
+}
+.event {
+  padding:10px 10px 0 10px;
+  min-height: 270px;
+  margin-top: 5vh;
+  background-color: #F0E2E7;
+  border-radius: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.futureevent{
+  display: flex;
+  align-items: stretch;
+  background-color: #f7f7f7;
+  margin:20px;
+  border-radius: 20px;
+  padding: 15px;
+  width:350px;
+  z-index:0;
+}
+
+.futureevent li{
+  width: max-content;
+}
+.futureevent img{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.futureeventDelete{
+  z-index: 20;
+  position: relative;
+  top:32px;
+}
+
+.event button{
+  margin-top: 20px;
+}
+
+.eventcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
 .yourGroup{
-  background-color: #ffd166;
-  border-radius: 10px;
+  background-color: #F0E2E7;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding:20px;
-  width:50vw
+  width:1000px
 }
 
 .delete{
   font-size: 180%;
   width: min-content;
   position: relative;
-  left:120px;
   opacity: 20%;
   transition: 1.5s;
-  z-index: 20;
-  top:35px;
+  z-index: 50;
+  left: 260px;
+  bottom:150px;
+}
+
+.card{
+z-index:0
 }
 
 .delete:hover{
@@ -82,8 +143,8 @@
 
 .currentTeam {
   padding: 10px;
-  background-color: #2196f3;
-  border-radius: 10px;
+  background-color: #BCF8EC;
+  border-radius: 15px;
 }
 
 .currentTeam img {
@@ -98,6 +159,12 @@
   align-items: center;
 }
 
+.currentUsers img{
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
 .backtogroups {
   margin-left: 3vw;
 
@@ -106,7 +173,7 @@
 .container {
   display: flex;
   justify-content: space-around;
-  align-items: end;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 .cardbtn {
@@ -126,6 +193,7 @@
 .regularcard {
   width: 18rem;
   margin: 10px;
+  align-items: stretch;
 }
 
 .emailContent {
@@ -134,11 +202,14 @@
 }
 
 .team {
-  padding:20px 10px 10px 10px;
+  padding:10px 10px 0 10px;
+  min-height: 200px;
   margin-top: 5vh;
-  margin-bottom: 5vh;
-  background-color: #8ecae6;
+  background-color: #BCF8EC;
   border-radius: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .deletebox {
@@ -147,17 +218,19 @@ opacity:30%
 
 .box {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fff;
+  border-radius: 15px;
 }
 
-.box:hover {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  animation-name: example;
-  animation-duration: 0.25s;
-  border-left: 8px solid #d62828;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.card-title{
+  height:7vh;
+  text-align: center;
 }
+
+.gameimg{
+  border-radius: 15px 15px 0 0;
+}
+
 
 .section-heading {
   /* font-family: "Dancing Script", cursive; */
@@ -168,9 +241,9 @@ opacity:30%
 
 .section-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
-  max-width: 1440px;
+  max-width: 1000px;
   margin: 0 auto;
   align-items: center;
 }
@@ -178,57 +251,35 @@ opacity:30%
 .profile {
   position: relative;
   transition: all 0.3s;
+  display:flex;
+  align-items: center;
+  padding:10px; 
+  width: 450px; 
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 5px #f1faee;
+  margin:10px 5px 10px 5px;
+}
+.Aboutme{
+text-align: left;
 }
 
-.profile:hover {
-  transform: translateY(25px);
-}
 
 .profile img {
-  max-width: 100%;
+  width:100px;
+  height:100px;
   border-radius: 50%;
   border: 5px solid #f7f7f7;
   filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
   cursor: pointer;
+  margin: 3px 20px 3px 3px;
 
 }
 
-.profile:not(:first-child) img {
-  margin-left: -20px;
-}
-
-.profile .name {
-  position: absolute;
-  background-color: #ffd166;
-  color: #fff;
-  /* font-family: "Bebas Neue", cursive; */
-  padding: 15px 30px;
-  border-radius: 100px;
-  bottom: -80px;
-  left: 50%;
-  white-space: nowrap;
-  transform: translate(-50%, -50px);
-  letter-spacing: 1px;
-  /* font-size: 20px; */
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.profile .name::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #ffd166;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.profile img:hover + .name {
-  opacity: 1;
-  transform: translateX(-50%);
-  box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+.userinfo{
+  display:flex;
+  flex-direction: column;
+  align-items:flex-start;
 }
 
 .jollycoop {
@@ -290,3 +341,16 @@ opacity:30%
     color: var(--color-3)
   }
 }
+
+.futureevent:hover {
+  color: #404040 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  /* background: none; */
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
+  width:max-content
+  }
+
+  

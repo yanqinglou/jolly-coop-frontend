@@ -38,8 +38,8 @@ const styleCard2 = {
       <Carousel.Item style={styleCard3} className="  mx-auto">
 
 
-      <img className=" w-100 rounded carouselImg" style={styleCard}src={game.imgURL} key={index} alt="Game Gallery"/>
-      <Carousel.Caption bg-dark mb-4 className="carousel-caption" >
+      <img className=" w-100 rounded carouselImg"src={game.imgURL} key={index} alt="Game Gallery"/>
+      <Carousel.Caption mb-4 className="carousel-caption" >
       <p className="captionName" key={index}>{game.name}</p>
     </Carousel.Caption>
       </Carousel.Item >

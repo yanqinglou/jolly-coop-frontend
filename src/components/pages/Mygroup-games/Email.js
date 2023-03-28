@@ -46,15 +46,15 @@ const Sendemail = (props) => {
   const emailText = `${props.username} in JOLLY-COOP is inviting you to vote!`;
 
   useEffect(() => {
-    console.log(props.group);
     setemailContent(emailText);
   }, []);
 
   return (
-    <div className="profile">
+    <div>
       <img
         onClick={handleShow}
         src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
+        style={{width:"80px", height:"80px", padding:"10px"}}
       ></img>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton className="addfriend">

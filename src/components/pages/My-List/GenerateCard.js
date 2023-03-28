@@ -7,7 +7,8 @@ import ps from "../../../images/ps-logo.png"
 
 const styleCard = {
     width: "18rem",
-    margin: "10px"
+    margin: "10px",
+    height: "75px"
 }
 
 const styleImg = {

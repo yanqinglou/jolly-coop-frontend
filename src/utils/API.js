@@ -36,6 +36,16 @@ const API = {
       },
     }).then((res) => res.json());
   },
+  updateUser:(userid,userObj,token)=>{
+    return fetch(`${URL_PREFIX}/api/users/${userid}`, {
+      method: "POST",
+      body: JSON.stringify(userObj),
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }).then((res) => res.json());
+  },
   getAllGroups: () => {
     return fetch(`${URL_PREFIX}/api/groups`).then((res) => res.json());
   },
@@ -199,7 +209,36 @@ const API = {
         "Content-Type": "application/json"
       },
     }).then((res) => res.json());
-  }
+  },
+  createEvent:(eventObj,token)=>{
+    return fetch(`${URL_PREFIX}/api/countdown`, {
+      method: "POST",
+      body:JSON.stringify(eventObj),
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+    }).then((res) => res.json());
+  },  
+  findEventinaGroup:(groupId,token)=>{
+    return fetch(`${URL_PREFIX}/api/countdown/group/${groupId}`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+    }).then((res) => res.json());
+  },
+  deleteEventinaGroup:(eventId,token)=>{
+    return fetch(`${URL_PREFIX}/api/countdown/${eventId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+    }).then((res) => res.json());
+  },
 };
+
 
 export default API;

@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import API from "../../../utils/API";
 import { useParams } from "react-router-dom";
-import ImgCarousel from "./ImgCarousel";
-import GroupCards from "./GroupCards.js";
+import Groupcard from "./Groupcard.js";
 // import  ImgCarousel  from "./ImgCarousel.js"
 
 function Home(props) {
   const params = useParams();
   console.log(params);
   const [user, setUser] = useState({});
+  const [year, setYear] = useState();
+
   const fetchUser = () => {
     API.getUserData(params.id, props.token).then((data) => {
       setUser(data);
+      const memDuration = data.updatedAt.split("-")[0]
+      setYear(memDuration)
     });
   };
   useEffect(() => {
@@ -40,31 +43,39 @@ function Home(props) {
   console.log(user);
 
   return (
-    <div>
+    <div style={{ minHeight: "50vh" }}>
       <div className="page-container">
-        <div className="welcomePage">
-          {user ? (
-            <h1 className="welcomePageh1">{user.username}'s top groups:</h1>
-            ): <h3>Loading...</h3>}
-        </div>
-        <div className="home-group-container">
-          {/* <h2 className="text-center top-groups">Your top groups</h2> */}
-          <div className="card-container">
-            {user.Groups ? (
-              <GroupCards user={user} />
-            ) : (
-              <h4 >Login to see your groups</h4>
-            )}
+        <div className="userprofile">
+          <img src={user.imgURL} alt="cat-profile-pic" />
+          <div className="userinfo">
+            <p className="name">
+              Username:
+              <strong>{ user.username}</strong>
+            </p>
+            <p className="Aboutme">
+              About me:
+              <strong>{user.Aboutme}</strong>
+            </p>
+            <p className="Year">
+              Member since:
+              <strong>{year}</strong>
+            </p>
           </div>
         </div>
-      </div>
-      <div className="titleBack">
-        <h3 className="popularGames">Popular games at Jolly-Co op</h3>
-        <div className="carousel-box">
-          <ImgCarousel games={games} />
+        <div className="home-group-container">
+            {user.Groups ? user.Groups.map((group)=>(
+                        <Groupcard
+                        name={group.name}
+                        id={group.id}
+                        key={group.id}
+                        token={props.token}
+                        userId={props.userId}
+                      />))
+            : 
+              <h4>Login to see your groups</h4>
+            }
         </div>
       </div>
-  
     </div>
   );
 }

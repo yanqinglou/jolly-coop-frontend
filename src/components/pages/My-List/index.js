@@ -4,11 +4,6 @@ import GenerateCard from "./GenerateCard";
 import Modal from 'react-bootstrap/Modal';
 import "./style.css"
 
-const styleButton = {
-    backgroundColor: "#ec5e5e",
-    borderColor: "#ec5e5e"
-}
-
 function MyList() {
     const [cards, setCards] = useState([]);
     const [show, setShow] = useState(false);
@@ -102,8 +97,8 @@ function MyList() {
                                 {groups}
                                 <br />
                                 <br />
-                                <button type="button" className='btn btn-primary me-3' style={styleButton} onClick={closeModal}>Close</button>
-                                <button type="submit" className='btn btn-primary submit-button' id="submit-style" style={style} onClick={handleSubmit}>Submit</button>
+                                <button type="button" className='button-74'  onClick={closeModal}>Close</button>
+                                <button type="submit" className='button-74'  onClick={handleSubmit}>Add</button>
                                 <div>
                                     <p className="submit-results" style={{textAlign: 'center', marginTop: "20px"}}></p>
                                 </div>

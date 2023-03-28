@@ -70,7 +70,8 @@ function FindGame() {
             <form className="search-game-form" onSubmit={handleSubmit}>
                 <label htmlFor="search-game" className="form-label">Search for a Game!</label>
                 <input type="text" id="search-game" className="form-control" name="search-game"/>
-                <button className="search-button btn btn-primary" type="submit">Search</button>
+                <br></br>
+                <button className="button-74" type="submit">Search</button>
             </form>
             <div className='card-container'>
                 {cards}

@@ -160,12 +160,12 @@ const Addfriend = (props) => {
   }, [alert]);
 
   return (
-    <div className="profile">
+    <div >
       <img
         onClick={handleShow}
         src="https://cdn-icons-png.flaticon.com/512/9898/9898762.png"
+        style={{width:"70px", height:"70px", padding:"10px"}}
       ></img>
-
       <Offcanvas
         className="addfriend"
         show={show}
@@ -232,7 +232,7 @@ const Addfriend = (props) => {
             <h6>Current Team Members</h6>
             {groupMem?.map((user) => (
               <div key={user.id} className="currentUsers">
-                <img></img>
+                <img src={user.imgURL}></img>
                 <h5>{user.username}</h5>
                 {isOwner ? (
                   <button
